@@ -210,6 +210,9 @@
         <h4 class="title is-4">
           Feed Versions Archived by Transitland
         </h4>
+
+        <multi-service-levels :fvids="entity.feed_versions.map((s)=>{return s.id})" />
+
         <b-table
           :data="entity.feed_versions"
           :striped="true"
