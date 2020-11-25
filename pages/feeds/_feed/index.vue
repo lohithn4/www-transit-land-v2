@@ -211,7 +211,7 @@
           Feed Versions Archived by Transitland
         </h4>
 
-        <multi-service-levels :fvids="entity.feed_versions.map((s)=>{return s.id})" />
+        <multi-service-levels :week-agg="true" :fvids="entity.feed_versions.map((s)=>{return s.id}).slice(0,10)" />
 
         <b-table
           :data="entity.feed_versions"
